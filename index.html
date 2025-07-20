@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutan Vdhyamandir</title>
+    <link rel="shortcut icon" href="logo.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <nav>
+        <div>
+            <a id="logo" target="_blank" rel="noopener noreferrer"></a>
+            <img target="logo" src="logo.jpeg" alt="Nutan Vidhyamandir" width="56" srcset="">
+            <h1>Nutan Vidhyamandir</h1>
+        </div>
+        <div class="options">
+              <ul>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>Academics</li>
+                <li>Admission</li>
+                <li>Contact us</li>
+            </ul>
+        </div>
+    </nav>    
+    <div class="card">
+        <div class="pre-primary">
+            <h3>Pre-Primary</h3>
+            <p>Because we care</p>
+        </div>
+        <div class="middleschool">
+            <h3>Middle School</h3>
+            <p>Where place to learn</p>
+        </div>
+        <div class="juniorcollege">
+            <h3>Junior College</h3>
+            <p>The future begins here</p>
+        </div>
+    </div>
+    <section class="schoolinfo-cards">
+        <div class="infocard">
+            <h2>About Nutan Vidhyamandir</h2>
+            <p>NUTAN PRI VIDYAMNADIR BHAGUR was established in 1969 and it is managed by the Pvt. Aided. It is located in Urban area. It is located in NASHIK block of NASHIK district of Maharashtra. The school consists of Grades from 1 to 4. The school is Co-educational and it doesn't have an attached pre-primary section. The school is N/A in nature and is not using school building as a shift-school. Marathi is the medium of instructions in this school. This school is approachable by all weather road. In this school academic session starts in April.
+         The school has Private building. It has got 6 classrooms for instructional purposes. All the classrooms are in good condition. It has 2 other rooms for non-teaching activities. The school has a separate room for Head master/Teacher. The school has No Boundary Wall boundary wall. The school has have electric connection. The source of Drinking Water in the school is Tap Water and it is functional. The school has 1 boys toilet and it is functional. and 1 girls toilet and it is functional. The school has no playground. The school has a library and has 625 books in its library. The school does not need ramp for disabled children to access classrooms. The school has 10 computers for teaching and learning purposes and all are functional. The school is not having a computer aided learning lab. The school is Provided and Prepared in School Premises providing mid-day meal.</p>
+        </div>
+        <div class="cardssection">
+            <div class="ethos">
+                <h2>The Ethos</h2>
+                <p>Serving educational requirement since 1925, Barnes welcomes families from all nationalities and offers the very best in Indian Education. This is within the context to an age old boarding community, and is epitomized by the School's philosophy of 'the best for every child'</p>
+            </div>
+            <div class="our-mission">
+                <h2>Our Mission</h2>
+                <p>To facilitate and support learning, in a secure, secular environment, that develops the students' intellectual, moral and creative capablities promoting awarness, understating and tolerance; thereby enabling them harmoniously resolve dynamic challenges of a diverse global community.</p>
+            </div>
+            <div class="our-vision">
+                <h2>Our Vision</h2>
+                <p>We seek to forge a lifelong bond with our students, empowering them to represent our core values of excellence, humility and inclusiveness while constructively contributing to the community as leaders, civil servants and achievers in sporting or and other chosen field.</p>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="adress-contact">
+        <div class="address">
+            <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+            <p>Devlali,<br>Maharashtra - 422401, India</p>
+        </div>
+        <div class="contact">
+            <h3><i class="fas fa-phone-alt"></i> Contact us</h3>
+            <p>
+                For admission: <i class="fas fa-mobile-alt"></i> XXXXX XXXXX<br>
+                <i class="fas fa-envelope"></i> administration@nutanvidhyamandir.com
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+<script>
+
+// 2. Scroll-triggered Footer Animation
+const footer = document.querySelector('footer');
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            footer.classList.add('visible');
+        }
+    });
+}, {
+    threshold: 0.2
+});
+observer.observe(footer);
+
+// 3. Dynamic Year in Footer
+document.getElementById('year').textContent = new Date().getFullYear();
+
+</script>
+
+</html>
