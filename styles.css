@@ -160,63 +160,89 @@ nav h1 {
 
 /* Footer */
 footer {
-  background: #1e3a5c;
-  color: #fff;
-  padding: 2rem 1rem 1rem 1rem;
-  margin-top: 2rem;
-  border-radius: 18px 18px 0 0;
-  box-shadow: 0 -2px 12px rgba(30,58,92,0.07);
+    background: #1e3a5c;
+    color: #fff;
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -2px 12px rgba(30,58,92,0.07);
 }
+
 .adress-contact {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    justify-content: space-between;
+    align-items: start;
 }
+
 .address, .contact {
-  flex: 1 1 220px;
-  min-width: 220px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.2s;
 }
+
+.address:hover, .contact:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
 footer h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #ffd700;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
-footer p, footer a {
-  color: #e0e0e0;
-  font-size: 1rem;
+
+footer p {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-left: 1.8rem;
 }
+
 footer i {
-  margin-right: 0.5rem;
-  color: #ffd700;
-}
-footer div:last-child {
-  text-align: center;
-  margin-top: 1.5rem;
-  font-size: 0.95rem;
-  color: #ffd700;
+    width: 20px;
+    color: #ffd700;
 }
 
-/* Utility classes */
-.active {
-  background: #fff !important;
-  color: #1e3a5c !important;
-}
-.show ul {
-  display: flex !important;
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-/* Hide info card paragraphs by default on mobile, toggle on click */
-@media (max-width: 700px) {
-  .schoolinfo-cards h2 + p {
-    display: none;
-  }
+footer a:hover {
+    color: #fff;
 }
 
-/* Smooth transitions */
-.options ul li,
-.card > div,
-.infocard,
-.cardssection > div {
-  transition: all 0.2s;
+/* Footer responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 2rem 1rem;
+    }
+    
+    .adress-contact {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    footer p {
+        margin-left: 1.5rem;
+    }
+}
+
+/* Copyright section - add this if you want a copyright notice */
+.copyright {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+    font-size: 0.9rem;
 }
