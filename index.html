@@ -79,23 +79,55 @@
 </footer>
 </body>
 <script>
+// 1. Highlight Active Navigation Item
+document.querySelectorAll('.options ul li').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelectorAll('.options ul li').forEach(li => li.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
 
-// 2. Scroll-triggered Footer Animation
-const footer = document.querySelector('footer');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            footer.classList.add('visible');
+// 2. Smooth Scroll to Sections (if you add section IDs)
+document.querySelectorAll('.options ul li').forEach((item, idx) => {
+    item.addEventListener('click', function() {
+        const sectionIds = ['top', 'about', 'academics', 'admission', 'contact'];
+        if (sectionIds[idx] && document.getElementById(sectionIds[idx])) {
+            document.getElementById(sectionIds[idx]).scrollIntoView({ behavior: 'smooth' });
         }
     });
-}, {
-    threshold: 0.2
 });
-observer.observe(footer);
 
-// 3. Dynamic Year in Footer
-document.getElementById('year').textContent = new Date().getFullYear();
+// 3. Responsive Mobile Menu Toggle (add a menu icon in HTML for this to work)
+const menuIcon = document.createElement('span');
+menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+menuIcon.className = 'menu-toggle';
+document.querySelector('nav').prepend(menuIcon);
 
+menuIcon.addEventListener('click', () => {
+    document.querySelector('.options').classList.toggle('show');
+});
+
+// 4. Show/Hide School Info Cards
+document.querySelectorAll('.schoolinfo-cards h2').forEach(header => {
+    header.style.cursor = 'pointer';
+    header.addEventListener('click', function() {
+        const p = this.nextElementSibling;
+        if (p.style.display === 'none') {
+            p.style.display = 'block';
+        } else {
+            p.style.display = 'none';
+        }
+    });
+});
+
+// 5. Dynamic Year in Footer (add <span id="year"></span> in your footer)
+let yearSpan = document.getElementById('year');
+if (!yearSpan) {
+    const copyright = document.createElement('div');
+    copyright.innerHTML = '&copy; <span id="year"></span> Nutan Vidhyamandir';
+    document.querySelector('footer').appendChild(copyright);
+    yearSpan = document.getElementById('year');
+}
+yearSpan.textContent = new Date().getFullYear();
 </script>
-
 </html>
