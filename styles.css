@@ -237,12 +237,3 @@ footer a:hover {
     }
 }
 
-/* Copyright section - add this if you want a copyright notice */
-.copyright {
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: #e0e0e0;
-    font-size: 0.9rem;
-}
